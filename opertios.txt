@@ -1,0 +1,48 @@
+clc;
+clear all;
+close all;
+x=0:1:4
+x1=[1 2 3 4 5];
+subplot(6,3,1);
+stem(x,x1);
+x2=[1 1 1 1 1];
+subplot(6,3,2);
+stem(x2);
+
+
+
+s=x1+x2;
+subplot(6,3,3);
+stem(x,s);
+xlabel('time');
+ylabel('Amp');
+title('Add');
+
+su=x1-x2;
+subplot(6,3,4);
+stem(x,su);
+xlabel('time');
+ylabel('Amp');
+title('Sub');
+
+mul=x1.*x2;
+subplot(6,3,5);
+stem(x,mul);
+xlabel('time');
+ylabel('Amp');
+title('Mul');
+
+x=x+0;
+subplot(6,3,6);
+stem(x,x1);
+xlabel('time');
+ylabel('Amp');
+title('Shift');
+
+x=-x
+subplot(6,3,7);
+stem(x,x1);
+xlabel('time');
+ylabel('Amp');
+title('Reverse');
+

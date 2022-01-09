@@ -1,0 +1,4 @@
+X=input('Enter the Sequence : ');
+N=input('Enter the Limit : ');
+disp(fft(X,N));
+disp(ifft(X,N));

@@ -1,0 +1,24 @@
+k=input('Enter the Order: ');
+fc=input('Enter Cutoff frequency: ');
+
+hamm=fir1(k,fc,hamming(k+1));
+figure(1);
+freqz(hamm,1,500);
+title('Hamming Window');
+
+hann=fir1(k,fc,hanning(k+1));
+figure(2);
+freqz(hann,1,500);
+title('Hanning Window');
+
+rect=fir1(k,fc,rectwin(k+1));
+figure(3);
+freqz(rect,1,500);
+title('Rectangular Window');
+
+bla=fir1(k,fc,blackman(k+1));
+figure(4);
+freqz(bla,1,500);
+title('Blackman Window');
+
+wvtool(hamming(500),hanning(500),rectwin(500),blackman(500));

@@ -1,0 +1,17 @@
+clc
+close all;
+x1=input('Enter Sequence 1: ');
+x2=input('Enter Sequence 2: ');
+l_x1=length(x1);
+l_x2=length(x2);
+L=max(l_x1,l_x2);
+Q=cconv(x1,x2,L);
+subplot(3,1,1);
+stem(x1);
+title('X1');
+subplot(3,1,2);
+stem(x2);
+title('X2');
+subplot(3,1,3);
+stem(Q);
+title('Convoluted');

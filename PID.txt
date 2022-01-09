@@ -1,0 +1,10 @@
+s=tf('s');
+fn=tf([1],[1 10 20]);
+kp=350;
+ki=300;
+kd=50;
+K=kp+ki/s+kd*s;
+K_fn=fn*K;
+in=feedback(K_fn,1);
+
+step(in);

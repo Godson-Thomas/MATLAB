@@ -1,0 +1,91 @@
+clc;
+close all;
+clear all;
+
+x=0:0.1:20;
+y=sin(3*x);
+subplot(8,8,1);
+plot(x,y);
+xlabel('time');
+ylabel('Amp');
+title('Sine Signal');
+
+
+n=20;
+x=0:1:n-1;
+y=[ones(1,n)];
+subplot(8,8,2);
+plot(x,y);
+xlabel('Amplitude');
+ylabel('time');
+title('Unit step');
+
+x=0:1:20;
+y=0:1:20;
+subplot(8,8,3);
+plot(x,y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Ramp Signal');
+
+n=10;
+x=0:0.1:n-1;
+y=exp(3*x);
+subplot(8,8,4);
+plot(x,y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Expo signal');
+
+
+
+clc;
+close all;
+clear all;
+
+x=0:0.1:20;
+y=sin(3*x);
+subplot(3,3,1);
+stem(x,y);
+xlabel('time');
+ylabel('Amp');
+title('Sine Signal');
+
+
+n=20;
+x=0:1:n-1;
+y=[ones(1,n)];
+subplot(3,3,2);
+stem(x,y);
+xlabel('Amplitude');
+ylabel('time');
+title('Unit step');
+
+x=0:1:20;
+y=0:1:20;
+subplot(3,3,3);
+stem(x,y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Ramp Signal');
+
+n=20;
+x=0:1:n-1;
+y=exp(3*x);
+subplot(3,3,4);
+stem(x,y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Expo signal');
+
+x=0:1:4;
+y=[zeros(1,2),ones(1,1),zeros(1,2)]
+subplot(3,3,5);
+stem(x,y);
+xlabel('Time');
+ylabel('Amplitude');
+title('unit impulse signal');
+
+
+
+

@@ -1,0 +1,5 @@
+s=tf('s');
+G=tf([3],[0.5 1]);
+H=tf([2],[1 1]);
+in=feedback(G,H);
+step(in);

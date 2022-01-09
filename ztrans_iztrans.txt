@@ -1,0 +1,2 @@
+syms a w n
+disp(iztrans(z/(z-5)))

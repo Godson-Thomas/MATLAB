@@ -1,0 +1,19 @@
+clc;
+close all;
+N=input('Enter the Order: ');
+fc=300;
+fs=1000;
+[b,a]=butter(N,fc/(fs/2));
+figure(1);
+freqz(b,a);
+title('Butterworth');
+
+
+datain=randn(1000,1);
+figure(2);
+subplot(2,1,1);
+plot(dataout);
+dataout=filter(b,a,datain);
+subplot(2,1,2);
+plot(dataout);
+title('Filtered ButterWorth');

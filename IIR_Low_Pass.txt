@@ -1,0 +1,12 @@
+rp=0.2;
+rs=20;
+fp=200;
+fs=600;
+f=2000;
+wp=2*fp/f;
+ws=2*fs/f;
+[N,W]=buttord(wp,ws,rp,rs);
+[b,a]=butter(N,W);
+figure(1);
+freqz(b,a);
+title('Butterworth IIR low pass filter');

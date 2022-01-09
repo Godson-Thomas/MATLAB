@@ -1,0 +1,7 @@
+s=tf('s');
+z=tf('z',0.1);
+
+fn_s=1/(s^2+10*s+20);
+ltiview(fn_s);
+H=(z-1)/(z^2-1.85*z+0.9);
+ltiview(H);
